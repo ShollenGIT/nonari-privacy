@@ -37,107 +37,151 @@
         color: var(--muted);
         font-size: 0.9rem;
       }
+      .lang-switch {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+      }
+      .lang-switch button {
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        padding: 4px 12px;
+        border-radius: 999px;
+        font: inherit;
+        font-size: 0.85rem;
+        cursor: pointer;
+      }
+      .lang-switch button[aria-pressed="true"] {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+      [data-lang] { display: none; }
+      [data-lang].active { display: block; }
     </style>
   </head>
   <body>
     <main>
-      <h1>Politique de confidentialité — Nonari</h1>
-      <p class="updated">Dernière mise à jour : 10 août 2026</p>
+      <div class="lang-switch">
+        <button type="button" data-set="fr" aria-pressed="true">Français</button>
+        <button type="button" data-set="en" aria-pressed="false">English</button>
+      </div>
 
-      <p>
-        La présente politique décrit la manière dont l'application mobile
-        <strong>Nonari</strong> (« l'Application ») traite les données de ses
-        utilisateurs. L'Application est éditée par <strong>Shollen Games</strong>
-        (« nous »). Pour toute question, vous pouvez nous contacter à l'adresse
-        <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a>.
-      </p>
+      <!-- ===================== FRANÇAIS ===================== -->
+      <div data-lang="fr" class="active">
+        <h1>Politique de confidentialité — Nonari</h1>
+        <p class="updated">Dernière mise à jour : 10 août 2026</p>
 
-      <h2>1. Données que nous traitons</h2>
-      <p>Nonari est un jeu conçu pour fonctionner hors ligne. Nous ne créons pas de compte utilisateur et ne demandons aucune donnée personnelle identifiante.</p>
-      <ul>
-        <li>
-          <strong>Données de jeu, stockées uniquement sur votre appareil</strong> :
-          progression des grilles, réglages et préférences. Elles ne quittent pas
-          votre téléphone et ne nous sont pas transmises.
-        </li>
-        <li>
-          <strong>Données liées à la publicité</strong> : l'Application affiche des
-          publicités via Google AdMob. À cette fin, Google peut collecter et traiter
-          certaines données (identifiants publicitaires de l'appareil, adresse IP,
-          informations sur l'appareil et interactions avec les annonces), dans les
-          conditions décrites ci-dessous.
-        </li>
-      </ul>
+        <p>
+          La présente politique décrit la manière dont l'application mobile
+          <strong>Nonari</strong> (« l'Application ») traite les données de ses
+          utilisateurs. L'Application est éditée par <strong>Shollen Games</strong>
+          (« nous »). Pour toute question, vous pouvez nous contacter à l'adresse
+          <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a>.
+        </p>
 
-      <h2>2. Publicité et consentement</h2>
-      <p>
-        Nous utilisons <strong>Google AdMob</strong> pour diffuser des publicités
-        (interstitielles et vidéos avec récompense). Selon votre localisation,
-        Google agit en tant que responsable ou sous-traitant du traitement de ces
-        données. Pour en savoir plus :
-      </p>
-      <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité de Google</a></li>
-        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Comment AdMob utilise les données</a></li>
-      </ul>
-      <p>
-        Si vous vous trouvez dans l'Espace économique européen, au Royaume-Uni ou en
-        Suisse, un <strong>formulaire de consentement</strong> vous est présenté au
-        premier lancement, conformément au RGPD. Vous y choisissez d'accepter ou de
-        refuser l'utilisation de vos données à des fins de publicité personnalisée.
-        En cas de refus, des publicités non personnalisées peuvent être affichées.
-      </p>
+        <h2>1. Données que nous traitons</h2>
+        <p>Nonari est un jeu conçu pour fonctionner hors ligne. Nous ne créons pas de compte utilisateur et ne demandons aucune donnée personnelle identifiante.</p>
+        <ul>
+          <li><strong>Données de jeu, stockées uniquement sur votre appareil</strong> : progression des grilles, réglages et préférences. Elles ne quittent pas votre téléphone et ne nous sont pas transmises.</li>
+          <li><strong>Données liées à la publicité</strong> : l'Application affiche des publicités via Google AdMob. À cette fin, Google peut collecter et traiter certaines données (identifiants publicitaires de l'appareil, adresse IP, informations sur l'appareil et interactions avec les annonces), dans les conditions décrites ci-dessous.</li>
+        </ul>
 
-      <h2>3. Modifier ou retirer votre consentement</h2>
-      <p>
-        Vous pouvez à tout moment revenir sur votre choix depuis l'Application, via
-        <strong>Réglages → Confidentialité</strong>, qui rouvre le formulaire de
-        consentement.
-      </p>
+        <h2>2. Publicité et consentement</h2>
+        <p>Nous utilisons <strong>Google AdMob</strong> pour diffuser des publicités (interstitielles et vidéos avec récompense). Selon votre localisation, Google agit en tant que responsable ou sous-traitant du traitement de ces données. Pour en savoir plus :</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Règles de confidentialité de Google</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Comment AdMob utilise les données</a></li>
+        </ul>
+        <p>Si vous vous trouvez dans l'Espace économique européen, au Royaume-Uni ou en Suisse, un <strong>formulaire de consentement</strong> vous est présenté au premier lancement, conformément au RGPD. Vous y choisissez d'accepter ou de refuser l'utilisation de vos données à des fins de publicité personnalisée. En cas de refus, des publicités non personnalisées peuvent être affichées.</p>
 
-      <h2>4. Partage des données</h2>
-      <p>
-        Nous ne vendons pas vos données. Les seules données transmises à un tiers le
-        sont à <strong>Google</strong> (AdMob) aux fins de diffusion publicitaire
-        décrites ci-dessus. Nous n'y avons pas accès individuellement.
-      </p>
+        <h2>3. Modifier ou retirer votre consentement</h2>
+        <p>Vous pouvez à tout moment revenir sur votre choix depuis l'Application, via <strong>Réglages → Confidentialité</strong>, qui rouvre le formulaire de consentement.</p>
 
-      <h2>5. Vos droits</h2>
-      <p>
-        Conformément au RGPD, vous disposez d'un droit d'accès, de rectification,
-        d'effacement, de limitation et d'opposition concernant vos données. Les
-        données de jeu étant stockées localement, vous pouvez les supprimer en
-        désinstallant l'Application. Pour toute demande relative aux données
-        publicitaires, vous pouvez nous contacter ou vous référer aux outils de
-        Google mentionnés ci-dessus. Contact :
-        <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a>.
-      </p>
+        <h2>4. Partage des données</h2>
+        <p>Nous ne vendons pas vos données. Les seules données transmises à un tiers le sont à <strong>Google</strong> (AdMob) aux fins de diffusion publicitaire décrites ci-dessus. Nous n'y avons pas accès individuellement.</p>
 
-      <h2>6. Enfants</h2>
-      <p>
-        L'Application ne s'adresse pas spécifiquement aux enfants de moins de 13 ans
-        et ne collecte pas sciemment leurs données personnelles.
-      </p>
+        <h2>5. Vos droits</h2>
+        <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition concernant vos données. Les données de jeu étant stockées localement, vous pouvez les supprimer en désinstallant l'Application. Pour toute demande relative aux données publicitaires, vous pouvez nous contacter ou vous référer aux outils de Google mentionnés ci-dessus. Contact : <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a>.</p>
 
-      <h2>7. Achats intégrés</h2>
-      <p>
-        L'Application peut proposer des achats intégrés (par exemple pour supprimer
-        les publicités ou débloquer des fonctionnalités). Ces transactions sont
-        gérées par la plateforme de distribution (Google Play) ; nous ne recevons ni
-        ne stockons vos informations de paiement.
-      </p>
+        <h2>6. Enfants</h2>
+        <p>L'Application ne s'adresse pas spécifiquement aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données personnelles.</p>
 
-      <h2>8. Modifications de cette politique</h2>
-      <p>
-        Cette politique peut être mise à jour. La date de dernière mise à jour
-        figure en haut de page ; les modifications importantes seront signalées dans
-        l'Application le cas échéant.
-      </p>
+        <h2>7. Achats intégrés</h2>
+        <p>L'Application peut proposer des achats intégrés (par exemple pour supprimer les publicités ou débloquer des fonctionnalités). Ces transactions sont gérées par la plateforme de distribution (Google Play) ; nous ne recevons ni ne stockons vos informations de paiement.</p>
 
-      <footer>
-        Shollen Games — Nonari · Contact :
-        <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a>
-      </footer>
+        <h2>8. Modifications de cette politique</h2>
+        <p>Cette politique peut être mise à jour. La date de dernière mise à jour figure en haut de page ; les modifications importantes seront signalées dans l'Application le cas échéant.</p>
+
+        <footer>Shollen Games — Nonari · Contact : <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a></footer>
+      </div>
+
+      <!-- ===================== ENGLISH ===================== -->
+      <div data-lang="en">
+        <h1>Privacy Policy — Nonari</h1>
+        <p class="updated">Last updated: 10 August 2026</p>
+
+        <p>
+          This policy describes how the mobile application <strong>Nonari</strong>
+          ("the App") handles its users' data. The App is published by
+          <strong>Shollen Games</strong> ("we"). For any question, you can contact us at
+          <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a>.
+        </p>
+
+        <h2>1. Data we process</h2>
+        <p>Nonari is a game designed to work offline. We do not create user accounts and do not ask for any identifying personal data.</p>
+        <ul>
+          <li><strong>Game data, stored only on your device</strong>: puzzle progress, settings and preferences. It never leaves your phone and is not transmitted to us.</li>
+          <li><strong>Advertising-related data</strong>: the App displays ads via Google AdMob. For this purpose, Google may collect and process certain data (device advertising identifiers, IP address, device information and ad interactions), under the conditions described below.</li>
+        </ul>
+
+        <h2>2. Advertising and consent</h2>
+        <p>We use <strong>Google AdMob</strong> to serve ads (interstitial and rewarded video). Depending on your location, Google acts as a data controller or processor of this data. To learn more:</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">How AdMob uses data</a></li>
+        </ul>
+        <p>If you are located in the European Economic Area, the United Kingdom or Switzerland, a <strong>consent form</strong> is shown on first launch, in accordance with the GDPR. There you choose to accept or refuse the use of your data for personalized advertising. If you refuse, non-personalized ads may be shown.</p>
+
+        <h2>3. Change or withdraw your consent</h2>
+        <p>You can change your choice at any time from within the App, via <strong>Settings → Privacy</strong>, which reopens the consent form.</p>
+
+        <h2>4. Data sharing</h2>
+        <p>We do not sell your data. The only data shared with a third party is shared with <strong>Google</strong> (AdMob) for the advertising purposes described above. We do not have individual access to it.</p>
+
+        <h2>5. Your rights</h2>
+        <p>Under the GDPR, you have the right to access, rectify, erase, restrict and object to the processing of your data. As game data is stored locally, you can delete it by uninstalling the App. For any request regarding advertising data, you can contact us or refer to the Google tools mentioned above. Contact: <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a>.</p>
+
+        <h2>6. Children</h2>
+        <p>The App is not specifically directed at children under 13 and does not knowingly collect their personal data.</p>
+
+        <h2>7. In-app purchases</h2>
+        <p>The App may offer in-app purchases (for example to remove ads or unlock features). These transactions are handled by the distribution platform (Google Play); we neither receive nor store your payment information.</p>
+
+        <h2>8. Changes to this policy</h2>
+        <p>This policy may be updated. The last-updated date appears at the top of the page; significant changes will be signalled in the App where appropriate.</p>
+
+        <footer>Shollen Games — Nonari · Contact: <a href="mailto:cyril33m@gmail.com">cyril33m@gmail.com</a></footer>
+      </div>
     </main>
+
+    <script>
+      (function () {
+        var buttons = document.querySelectorAll('.lang-switch button');
+        var blocks = document.querySelectorAll('[data-lang]');
+        function setLang(lang) {
+          document.documentElement.lang = lang;
+          blocks.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-lang') === lang); });
+          buttons.forEach(function (btn) { btn.setAttribute('aria-pressed', btn.getAttribute('data-set') === lang ? 'true' : 'false'); });
+        }
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () { setLang(btn.getAttribute('data-set')); });
+        });
+        // Langue initiale : selon le navigateur, français par défaut.
+        setLang((navigator.language || 'fr').toLowerCase().indexOf('en') === 0 ? 'en' : 'fr');
+      })();
+    </script>
   </body>
 </html>
